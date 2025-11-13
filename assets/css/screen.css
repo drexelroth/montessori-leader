@@ -2,9 +2,14 @@
 @import "fonts.css";
 
 :root {
-    --font-sans: Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-    --font-serif: "PT Serif", Times, serif;
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: "Playfair Display", "PT Serif", Times, serif;
     --h1-size: 4.8rem;
+    --ml-navy: #1A2A44;
+    --ml-sand: #F5F2ED;
+    --ml-gold: #C6A15B;
+    --ml-max-width: 1100px;
+    --ml-shadow: 0 30px 70px rgba(26, 42, 68, 0.12);
 }
 
 body {
@@ -418,6 +423,413 @@ body:not(.home-template) .gh-article-image {
     width: 17px;
     height: 17px;
     margin: 0;
+}
+
+/* Montessori Leader homepage */
+.home-template .home-montessori {
+    padding: 0;
+    background-color: var(--color-white);
+}
+
+.ml-section {
+    padding: clamp(70px, 9vw, 110px) var(--gap);
+    background-color: var(--color-white);
+}
+
+.ml-section + .ml-section {
+    border-top: 1px solid rgba(26, 42, 68, 0.08);
+}
+
+.ml-section--sand {
+    background-color: var(--ml-sand);
+}
+
+.ml-section-inner {
+    max-width: var(--ml-max-width);
+    margin: 0 auto;
+}
+
+.ml-section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.6rem, 3vw, 3.6rem);
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+    color: var(--ml-navy);
+    letter-spacing: 0.01em;
+}
+
+.ml-eyebrow {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: rgba(26, 42, 68, 0.6);
+    margin-bottom: 1.2rem;
+}
+
+.ml-rich-text p + p {
+    margin-top: 1.6rem;
+}
+
+.ml-hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 5rem;
+    align-items: center;
+    background-color: var(--color-white);
+}
+
+.ml-hero-title {
+    font-size: clamp(3.4rem, 5vw, 5.4rem);
+    color: var(--ml-navy);
+    line-height: 1.1;
+    margin-bottom: 1.6rem;
+}
+
+.ml-hero-subhead {
+    font-size: 2.1rem;
+    color: rgba(26, 42, 68, 0.85);
+    margin-bottom: 1.2rem;
+}
+
+.ml-hero-summary {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: rgba(26, 42, 68, 0.75);
+}
+
+.ml-hero__cta {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.ml-hero__cta .ml-btn {
+    width: fit-content;
+}
+
+.ml-hero__media {
+    display: flex;
+    justify-content: center;
+}
+
+.ml-book-cover {
+    padding: 3rem;
+    max-width: 360px;
+    width: 100%;
+    background: linear-gradient(145deg, rgba(26, 42, 68, 0.06), rgba(198, 161, 91, 0.15));
+    border-radius: 28px;
+    box-shadow: var(--ml-shadow);
+}
+
+.ml-book-cover img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 35px 45px rgba(0, 0, 0, 0.15);
+}
+
+.ml-fade-in {
+    opacity: 0;
+    animation: mlFadeIn 0.8s ease-out forwards;
+}
+
+.ml-hero__media.ml-fade-in {
+    animation-delay: 0.2s;
+}
+
+@keyframes mlFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ml-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.1rem 2.8rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: var(--ml-navy);
+    color: var(--color-white);
+    box-shadow: 0 20px 35px rgba(26, 42, 68, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.ml-btn:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 25px 50px rgba(26, 42, 68, 0.2);
+}
+
+.ml-btn--outline {
+    background: transparent;
+    color: var(--ml-navy);
+    border: 1px solid rgba(26, 42, 68, 0.25);
+    box-shadow: none;
+}
+
+.ml-link {
+    font-weight: 600;
+    color: var(--ml-navy);
+    text-decoration: none;
+}
+
+.ml-link:hover {
+    opacity: 0.8;
+}
+
+.ml-framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.4rem;
+}
+
+.ml-card {
+    background-color: var(--color-white);
+    padding: 2.4rem;
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(17, 24, 39, 0.08);
+    min-height: 220px;
+}
+
+.ml-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: var(--ml-navy);
+}
+
+.ml-card p {
+    color: rgba(26, 42, 68, 0.75);
+    line-height: 1.5;
+}
+
+.ml-line-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid rgba(26, 42, 68, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}
+
+.ml-line-icon span {
+    width: 26px;
+    height: 2px;
+    background-color: var(--ml-gold);
+}
+
+.ml-two-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 4rem;
+    align-items: center;
+}
+
+.ml-list-heading {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--ml-navy);
+}
+
+.ml-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ml-list li {
+    padding-left: 2.4rem;
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+.ml-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.9rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--ml-gold);
+}
+
+.ml-testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.8rem;
+}
+
+.ml-testimonial-card {
+    padding: 2.4rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(17, 24, 39, 0.08);
+    background-color: var(--color-white);
+}
+
+.ml-testimonial-card blockquote {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    line-height: 1.4;
+    color: var(--ml-navy);
+}
+
+.ml-testimonial-card figcaption {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(26, 42, 68, 0.65);
+}
+
+.ml-author-image {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 3 / 4;
+    border-radius: 28px;
+    background-color: rgba(26, 42, 68, 0.08);
+    box-shadow: 0 30px 50px rgba(26, 42, 68, 0.12);
+    overflow: hidden;
+}
+
+.ml-author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ml-free-box {
+    padding: 4rem;
+    border-radius: 32px;
+    box-shadow: 0 40px 70px rgba(26, 42, 68, 0.12);
+    background: var(--color-white);
+}
+
+.ml-toolkit-form {
+    margin-top: 2.4rem;
+}
+
+.ml-toolkit-input {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ml-toolkit-input input {
+    flex: 1;
+    min-width: 220px;
+    padding: 1.2rem 1.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(26, 42, 68, 0.25);
+    font-size: 1.5rem;
+}
+
+.ml-form-response {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: rgba(26, 42, 68, 0.75);
+    display: none;
+}
+
+[data-members-form-state] {
+    display: none;
+}
+
+form[data-members-state="success"] [data-members-form-state="success"],
+form[data-members-state="error"] [data-members-form-state="error"] {
+    display: block;
+}
+
+.ml-store-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.ml-contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 2.4rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media (min-width: 640px) {
+    .ml-hero__cta {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.6rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .ml-section {
+        padding: 64px var(--gap);
+    }
+
+    .ml-free-box {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .ml-section {
+        padding: 56px var(--gap);
+    }
+
+    .ml-hero__cta {
+        align-items: flex-start;
+    }
+
+    .ml-toolkit-input {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ml-toolkit-input input {
+        width: 100%;
+    }
+
+    .ml-store-buttons {
+        flex-direction: column;
+    }
+
+    .ml-author-image {
+        margin: 0 auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ml-fade-in {
+        animation: none;
+        opacity: 1;
+    }
+
+    .ml-btn {
+        transition: none;
+    }
 }
 
 @media (max-width: 767px) {

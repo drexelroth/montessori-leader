@@ -1,9 +1,184 @@
 {{!< default}}
 
-<main id="gh-main" class="gh-main">
-    {{#foreach posts limit="1"}}
-        <article class="gh-article {{post_class}}">
-            {{> content}}
-        </article>
-    {{/foreach}}
+<main id="gh-main" class="gh-main home-montessori">
+    <section class="ml-section ml-hero" id="hero">
+        <div class="ml-hero__content ml-fade-in">
+            <p class="ml-eyebrow">PROJECT: Montessori Leader</p>
+            <h1 class="ml-hero-title">The Montessori Leader</h1>
+            <p class="ml-hero-subhead">A new way to lead teams with clarity, independence, and extraordinary results.</p>
+            <p class="ml-hero-summary">This book reveals how Montessori principles&mdash;freedom within limits, purposeful work, and intrinsic motivation&mdash;can transform the way you build and lead modern teams.</p>
+            <div class="ml-hero__cta">
+                <a class="ml-btn" href="#purchase">Get the Book</a>
+                <a class="ml-link" href="#free-chapter">Download a Free Chapter &rarr;</a>
+            </div>
+        </div>
+        <div class="ml-hero__media ml-fade-in" aria-label="Book cover">
+            <figure class="ml-book-cover">
+                {{#if @site.cover_image}}
+                    <img src="{{@site.cover_image}}" alt="The Montessori Leader book cover" loading="lazy">
+                {{else}}
+                    <img src="{{asset "images/default-skin.png"}}" alt="The Montessori Leader book cover" loading="lazy">
+                {{/if}}
+            </figure>
+        </div>
+    </section>
+
+    <section class="ml-section ml-section--sand ml-promise" id="promise">
+        <div class="ml-section-inner">
+            <h2 class="ml-section-title">The Promise</h2>
+            <div class="ml-rich-text">
+                <p>Most leaders feel torn between giving people freedom and trying to keep work on track. I spent years wrestling with that tension myself&mdash;until I realized something simple: Montessori had already solved this problem a century ago.</p>
+                <p>In Montessori environments, children learn to manage their work, collaborate, and take genuine ownership. When I tried applying those principles to my teams, everything changed. Productivity, creativity, morale&mdash;they all shifted.</p>
+                <p>This book shows leaders how to build workplaces that run with clarity, trust, and autonomy. The result is simple: teams that achieve extraordinary results without burning out.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ml-section ml-framework" id="framework">
+        <div class="ml-section-inner">
+            <h2 class="ml-section-title">What&rsquo;s Inside</h2>
+            <div class="ml-framework-grid">
+                <article class="ml-card">
+                    <div class="ml-line-icon" aria-hidden="true"><span></span></div>
+                    <h3>Day One Momentum</h3>
+                    <p>Start teams with clarity and confidence by removing friction from the first moments.</p>
+                </article>
+                <article class="ml-card">
+                    <div class="ml-line-icon" aria-hidden="true"><span></span></div>
+                    <h3>Purposeful Work</h3>
+                    <p>Shift from task management to meaningful contribution that energizes people.</p>
+                </article>
+                <article class="ml-card">
+                    <div class="ml-line-icon" aria-hidden="true"><span></span></div>
+                    <h3>Freedom Within Limits</h3>
+                    <p>Give autonomy that&rsquo;s structured, not chaotic&mdash;just like a well-prepared environment.</p>
+                </article>
+                <article class="ml-card">
+                    <div class="ml-line-icon" aria-hidden="true"><span></span></div>
+                    <h3>The Prepared Leader</h3>
+                    <p>Lead by designing systems, rhythms, and expectations that empower independence.</p>
+                </article>
+                <article class="ml-card">
+                    <div class="ml-line-icon" aria-hidden="true"><span></span></div>
+                    <h3>Observation Over Control</h3>
+                    <p>Replace micromanagement with purposeful observation and targeted support.</p>
+                </article>
+                <article class="ml-card">
+                    <div class="ml-line-icon" aria-hidden="true"><span></span></div>
+                    <h3>Intrinsic Motivation at Work</h3>
+                    <p>Create cultures where people contribute because they care&mdash;not because they&rsquo;re watched.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="ml-section ml-section--sand ml-who" id="who">
+        <div class="ml-section-inner ml-two-column">
+            <div>
+                <h2 class="ml-section-title">Who This Book Is For</h2>
+                <p>This book is for leaders who want to build teams that run on trust, clarity, and ownership.</p>
+            </div>
+            <div>
+                <p class="ml-list-heading">Perfect for:</p>
+                <ul class="ml-list">
+                    <li>Founders and small-business entrepreneurs</li>
+                    <li>Leaders who want to stop micromanaging</li>
+                    <li>Team builders seeking autonomy and innovation</li>
+                    <li>Montessori educators curious about leadership</li>
+                    <li>Anyone tired of old, rigid leadership formulas</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="ml-section ml-testimonials" id="testimonials">
+        <div class="ml-section-inner">
+            <h2 class="ml-section-title">Testimonials</h2>
+            <div class="ml-testimonial-grid">
+                <figure class="ml-testimonial-card">
+                    <blockquote>&ldquo;A breakthrough in modern leadership.&rdquo;</blockquote>
+                    <figcaption>&mdash; Sarah Jennings, CEO</figcaption>
+                </figure>
+                <figure class="ml-testimonial-card">
+                    <blockquote>&ldquo;Finally, a framework that actually works with real teams.&rdquo;</blockquote>
+                    <figcaption>&mdash; Matthew Price, Operations Director</figcaption>
+                </figure>
+                <figure class="ml-testimonial-card">
+                    <blockquote>&ldquo;I saw immediate change in how my people collaborated.&rdquo;</blockquote>
+                    <figcaption>&mdash; Olivia Hart, Team Lead</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="ml-section ml-section--sand ml-author" id="author">
+        <div class="ml-section-inner ml-two-column">
+            <div class="ml-author-image" aria-label="Author photograph">
+                {{#if @site.logo}}
+                    <img src="{{@site.logo}}" alt="Author Drexel Rothrauff" loading="lazy">
+                {{else}}
+                    {{#if @site.icon}}
+                        <img src="{{@site.icon}}" alt="Author Drexel Rothrauff" loading="lazy">
+                    {{else}}
+                        <img src="{{asset "images/default-skin.svg"}}" alt="Author Drexel Rothrauff" loading="lazy">
+                    {{/if}}
+                {{/if}}
+            </div>
+            <div>
+                <p class="ml-eyebrow">About the Author</p>
+                <h2>About the Author</h2>
+                <p>I've spent the last decade building businesses&mdash;from electric bikes to software&mdash;and I kept running into the same problem: leaders felt overwhelmed, and teams felt underpowered. When I reconnected with my background in Montessori, the gap suddenly made sense.</p>
+                <p>Montessori wasn't just an educational approach&mdash;it was a complete blueprint for developing capable, self-directed people. When I applied these principles to the workplace, everything changed. <em>The Montessori Leader</em> is the book I wish I had years ago.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ml-section ml-free" id="free-chapter">
+        <div class="ml-section-inner">
+            <div class="ml-free-box">
+                <h2>Want a Free Chapter?</h2>
+                <p>Get the first chapter and the Montessori Leader Toolkit delivered to your inbox.</p>
+                {{#if @site.members_enabled}}
+                    <form class="ml-toolkit-form" data-members-form="subscribe">
+                        <label class="sr-only" for="ml-free-email">Email</label>
+                        <div class="ml-toolkit-input">
+                            <input id="ml-free-email" type="email" name="email" placeholder="Email" required data-members-email>
+                            <button class="ml-btn" type="submit">Get Instant Access</button>
+                        </div>
+                        <div class="ml-form-response" data-members-form-state="success">Check your inbox&mdash;your chapter is on the way.</div>
+                        <div class="ml-form-response" data-members-form-state="error">Something went wrong. Please try again.</div>
+                    </form>
+                {{else}}
+                    <a class="ml-btn" href="#purchase">Get Instant Access</a>
+                {{/if}}
+            </div>
+        </div>
+    </section>
+
+    <section class="ml-section ml-purchase" id="purchase">
+        <div class="ml-section-inner">
+            <h2>Available at:</h2>
+            <div class="ml-store-buttons">
+                <a class="ml-btn ml-btn--outline" href="https://www.amazon.com" target="_blank" rel="noopener">Amazon</a>
+                <a class="ml-btn ml-btn--outline" href="https://www.audible.com" target="_blank" rel="noopener">Audible</a>
+                <a class="ml-btn ml-btn--outline" href="https://www.barnesandnoble.com" target="_blank" rel="noopener">Barnes &amp; Noble</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ml-section ml-section--sand ml-contact" id="contact">
+        <div class="ml-section-inner">
+            <h2>Speaking &amp; Workshops</h2>
+            <p>If your organization wants to learn how Montessori principles help teams perform at their best, I'd love to help.</p>
+            <div class="ml-contact-actions">
+                {{#if @site.email}}
+                    <a class="ml-btn" href="mailto:{{@site.email}}">Book Drexel to Speak</a>
+                    <a class="ml-link" href="mailto:{{@site.email}}">Prefer email? Reach out directly.</a>
+                {{else}}
+                    <a class="ml-btn" href="mailto:hello@example.com">Book Drexel to Speak</a>
+                    <a class="ml-link" href="mailto:hello@example.com">Prefer email? Reach out directly.</a>
+                {{/if}}
+            </div>
+        </div>
+    </section>
 </main>
